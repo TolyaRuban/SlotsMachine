@@ -76,7 +76,9 @@ class MainGame extends Sprite {
         }
 
         this.btnSpin.animatePress();
-
+        this._userData.balance -= this.bets.currentBet;
+        this.balance.setValue(this._userData.balance);
+        
         this._spinData = null;
         this.bets.toDisable();
 
