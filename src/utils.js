@@ -11,8 +11,7 @@ const UTILS = {
     },
 
     getSpinResult: (uid, currnetBet) => {
-        let id = uid || 25;
-        return fetch(`https://game-server.kovalevskyi.net/spin?uid=${id}&bet=${currnetBet}`)
+        return fetch(`https://game-server.kovalevskyi.net/spin?uid=${uid}&bet=${currnetBet}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Could not reach website.");
